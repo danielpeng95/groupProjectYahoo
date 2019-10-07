@@ -1,4 +1,15 @@
 var Yahoo
+
+function Categ(pageObject) {
+    var number = 1
+    pageObject
+        .waitForElementVisible(`(//a[@class=" Mstart-3 unselected D-ib"])[${number}]`)
+        .click(`(//a[@class=" Mstart-3 unselected D-ib"])[${number}]`)
+        number+= 1
+
+}
+
+
 module.exports = {
     beforeEach: browser => {
         Yahoo = browser.page.yahooPage()
@@ -22,26 +33,18 @@ module.exports = {
             .setValue('@searchBar', 'pizza')
             .click('@searchButton')
             .verify.containsText('[class=" reg searchCenterMiddle"]', 'pizza')
-            
+
     },
-    'Can we change Tabs/Categories?': browser => {
+    'Can we change Tabs/Categories?': browser => { //Daniel
+        Yahoo
+            Categ(Yahoo)
+
+    },
+    'Do we get Daily news?': browser => { //Nate
         Yahoo
 
     },
-    'Do we get daily news?': browser => {
-        Yahoo
-            
-
-    },
-    'Do we get Daily news?': browser => {
-        Yahoo
-
-    },
-    'Check sort/relevance/time?': browser => {
-        Yahoo
-
-    },
-    'Can we ask/post questions?': browser => {
+    'Can we ask/post questions?': browser => { //Daniel
         Yahoo
 
     }

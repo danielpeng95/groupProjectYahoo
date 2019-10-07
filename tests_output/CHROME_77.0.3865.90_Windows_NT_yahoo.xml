@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
-            failures="0"
-            tests="7">
+            failures="1"
+            tests="3">
 
   <testsuite name="yahoo"
-    errors="0" failures="0" hostname="" id="" package="yahoo" skipped="0"
-    tests="7" time="24.71" timestamp="">
+    errors="0" failures="1" hostname="" id="" package="yahoo" skipped="2"
+    tests="3" time="56.73" timestamp="">
   
-    <testcase name="Can we Log in &amp; Log out?" classname="yahoo" time="17.56" assertions="3">
+    <testcase name="Can we Log in &amp; Log out?" classname="yahoo" time="38.02" assertions="3">
 
     
 
@@ -16,27 +16,34 @@
     
     </testcase>
   
-    <testcase name="Can we Search &amp; Check Results?" classname="yahoo" time="1.079" assertions="0">
+    <testcase name="Can we Search &amp; Check Results?" classname="yahoo" time="11.71" assertions="2">
+
+    
+
+    
     </testcase>
   
-    <testcase name="Can we change Tabs/Categories?" classname="yahoo" time="1.207" assertions="0">
-    </testcase>
-  
-    <testcase name="Can we Sign up?" classname="yahoo" time="0.9600" assertions="0">
-    </testcase>
-  
-    <testcase name="Do we get Daily news?" classname="yahoo" time="1.346" assertions="0">
-    </testcase>
-  
-    <testcase name="Can we Upvote?" classname="yahoo" time="1.171" assertions="0">
-    </testcase>
-  
-    <testcase name="Can we ask/post questions?" classname="yahoo" time="1.386" assertions="0">
+    <testcase name="Can we change Tabs/Categories?" classname="yahoo" time="6.999" assertions="1">  <failure message="Timed out while waiting for element &lt;(//a[@class=&#34; Mstart-3 unselected D-ib&#34;])[1]&gt; to be present for 5000 milliseconds. - expected [0;32m&#34;visible&#34;[0m but got: [0;31m&#34;not found&#34;[0m">    at Categ (C:\Users\benpe\DevMountain\groupProjectYahoo\tests\yahoo.js:6:10)
+    at Object.Can we change Tabs/Categories? (C:\Users\benpe\DevMountain\groupProjectYahoo\tests\yahoo.js:40:13)</failure>
+
+    <failure message="    at Categ (C:\Users\benpe\DevMountain\groupProjectYahoo\tests\yahoo.js:6:10)">    at Object.Can we change Tabs/Categories? (C:\Users\benpe\DevMountain\groupProjectYahoo\tests\yahoo.js:40:13)</failure>
     </testcase>
   
 
   
 
+  
+    
+    <testcase
+      name="Do we get Daily news?" classname="yahoo">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Can we ask/post questions?" classname="yahoo">
+      <skipped />
+    </testcase>
+    
   
   </testsuite>
 </testsuites>
