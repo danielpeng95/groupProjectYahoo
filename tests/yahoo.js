@@ -7,7 +7,31 @@ module.exports = {
     after: browser => {
         Yahoo.end()
     },
-    'Test name': browser => {
+    'Can we Log in & Log out?': browser => {
+        Yahoo
+            
+    },
+    'Can we Search & Check Results?': browser => {
+        Yahoo
+            
+    },
+    'Can we change Tabs/Categories?': browser => {
+        Yahoo
+            
+    },
+    'Can we Sign up?': browser => {
+        Yahoo
+            
+    },
+    'Do we get Daily news?': browser => {
+        Yahoo
+            
+    },
+    'Can we Upvote?': browser => {
+        Yahoo
+            
+    },
+    'Can we ask/post questions?': browser => {
         Yahoo
             
     }
