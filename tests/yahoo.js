@@ -18,7 +18,11 @@ module.exports = {
     },
     'Can we Search & Check Results?': browser => { //Nate
         Yahoo
-
+            .waitForElementVisible('@searchBar')
+            .setValue('@searchBar', 'pizza')
+            .click('@searchButton')
+            .verify.containsText('[class=" reg searchCenterMiddle"]', 'pizza')
+            
     },
     'Can we change Tabs/Categories?': browser => {
         Yahoo
