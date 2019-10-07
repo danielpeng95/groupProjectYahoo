@@ -1,14 +1,14 @@
-var checkPoint2
+var Yahoo
 module.exports = {
     beforeEach: browser => {
-        checkPoint2 = browser.page.checkPoint2()
-        checkPoint2.navigate()
+        Yahoo = browser.page.yahooPage()
+        Yahoo.navigate()
     },
     after: browser => {
-        checkPoint2.end()
+        Yahoo.end()
     },
     'Test name': browser => {
-        checkPoint2
+        Yahoo
             
     }
 }
