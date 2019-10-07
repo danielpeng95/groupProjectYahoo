@@ -1,5 +1,5 @@
 module.exports = {
-    url: 'https://devmountain-qa.github.io/weatherman/build/index.html',
+    url: 'https://answers.yahoo.com/',
     
     // elements: { //one way to write CSS selector
     //     searchBar: '[type="text"]',
