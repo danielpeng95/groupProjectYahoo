@@ -1,15 +1,23 @@
-var Yahoo
-
 function Categ(pageObject) {
-    var number = 1
-    pageObject
-        .waitForElementVisible(`(//a[@class=" Mstart-3 unselected D-ib"])[${number}]`)
-        .click(`(//a[@class=" Mstart-3 unselected D-ib"])[${number}]`)
-        number+= 1
-
+    var number
+    for (number = 25; number < 28; number++) {
+        pageObject
+            .api.resizeWindow(1600, 900)
+        pageObject
+            .useXpath()
+            .waitForElementVisible(`(//a[@class=" Mstart-3 unselected D-ib"])[${number}]`, 10000)
+            .click(`(//a[@class=" Mstart-3 unselected D-ib"])[${number}]`)
+            .useCss()
+            .getText('@catTitle', function (result) {
+                let t = result.value
+                console.log(result.value)
+                pageObject.verify.containsText('@catResult', t)
+            })
+        pageObject.api.back()
+    }
 }
 
-
+var Yahoo
 module.exports = {
     beforeEach: browser => {
         Yahoo = browser.page.yahooPage()
@@ -37,8 +45,7 @@ module.exports = {
     },
     'Can we change Tabs/Categories?': browser => { //Daniel
         Yahoo
-            Categ(Yahoo)
-
+        Categ(Yahoo) //function on top of this page
     },
     'Do we get Daily news?': browser => { //Nate
         Yahoo
