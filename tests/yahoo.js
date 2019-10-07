@@ -13,6 +13,10 @@ module.exports = {
     },
     'Can we Search & Check Results?': browser => {
         Yahoo
+            .waitForElementVisible('@searchBar')
+            .setValue('@searchBar', 'pizza')
+            .click('@searchButton')
+            .verify.containsText('[class=" reg searchCenterMiddle"]', 'pizza')
             
     },
     'Can we change Tabs/Categories?': browser => {

@@ -11,14 +11,11 @@ module.exports = {
     // }
 
 
-    // elements: { //another way to write CSS selector
-    //     searchBar: '[type="text"]',
-    //     resultCity: '.current-weather__location',
-    //     errorMessage: '.error-message__message',
-    //     searchButton: '.enter-location__submit',
-    //     searchAgainButton: '.current-weather__search-again',
-    //     tryAgainButton: '.error-message__try-again'
-    // }
+    elements: { //Nate
+        searchBar: '[name="p"]',
+        searchButton: '.SharedUH_button1_2fHd_',
+        searchResults: '[class=" reg searchCenterMiddle"]'
+    }
 
     // elements: { //xPath Selector
     //     searchBar: {selector: '//input[@type="text"]', locateStrategy: 'xpath'},
