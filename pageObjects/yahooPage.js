@@ -1,14 +1,15 @@
 module.exports = {
     url: 'https://answers.yahoo.com/',
     
-    // elements: { //one way to write CSS selector
-    //     searchBar: '[type="text"]',
-    //     resultCity: '[class="current-weather__location"]',
-    //     errorMessage: '[class="error-message__message"]',
-    //     searchButton: '[class="enter-location__submit"]',
-    //     searchAgainButton: '[class="current-weather__search-again"]',
-    //     tryAgainButton: '[class="error-message__try-again"]'
-    // }
+    elements: { //Daniel
+        //selectors for log in & log out
+        signIn: '[class="SharedUH_signIn_PIot1"]',
+        logIn: '[id="login-username"]',
+        next: '[type="submit"]',
+        pass: '[id="login-passwd"]',
+        submit: '[name="verifyPassword"]',
+        check: '[class="D(ib) Maw(100px) Ov(h) Whs(nw) Tov(e) Lh($userNavTextLh) Pstart(8px) Fz(14px) Fw(b) Va(t) ua-ie7_D(n) C(#4d00ae)"]'
+    }
 
 
     // elements: { //another way to write CSS selector
