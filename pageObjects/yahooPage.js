@@ -8,14 +8,17 @@ module.exports = {
         next: '[type="submit"]',
         pass: '[id="login-passwd"]',
         submit: '[name="verifyPassword"]',
-        check: '[class="D(ib) Maw(100px) Ov(h) Whs(nw) Tov(e) Lh($userNavTextLh) Pstart(8px) Fz(14px) Fw(b) Va(t) ua-ie7_D(n) C(#4d00ae)"]'
-    },
+        check: '[class="D(ib) Maw(100px) Ov(h) Whs(nw) Tov(e) Lh($userNavTextLh) Pstart(8px) Fz(14px) Fw(b) Va(t) ua-ie7_D(n) C(#4d00ae)"]',
 
 
-    elements: { //Nate
+
+
+        //Nate
         searchBar: '[name="p"]',
         searchButton: '.SharedUH_button1_2fHd_',
         searchResults: '[class=" reg searchCenterMiddle"]'
+
+        
     }
 
     // elements: { //xPath Selector

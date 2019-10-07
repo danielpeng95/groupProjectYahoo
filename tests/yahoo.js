@@ -24,23 +24,23 @@ module.exports = {
             .verify.containsText('[class=" reg searchCenterMiddle"]', 'pizza')
             
     },
-    'Can we change Tabs/Categories?': browser => {
+    'Can we change Tabs/Categories?': browser => { //Daniel
         Yahoo
 
     },
-    'Can we Sign up?': browser => {
+    'Can we Sign up?': browser => { //Nate
         Yahoo
 
     },
-    'Do we get Daily news?': browser => {
+    'Do we get Daily news?': browser => { //Daniel
         Yahoo
 
     },
-    'Can we Upvote?': browser => {
+    'Can we Upvote?': browser => { //Nate
         Yahoo
 
     },
-    'Can we ask/post questions?': browser => {
+    'Can we ask/post questions?': browser => { //Daniel
         Yahoo
 
     }

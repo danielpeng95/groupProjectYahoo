@@ -5,9 +5,9 @@
 
   <testsuite name="yahoo"
     errors="0" failures="0" hostname="" id="" package="yahoo" skipped="0"
-    tests="7" time="24.71" timestamp="">
+    tests="7" time="56.63" timestamp="">
   
-    <testcase name="Can we Log in &amp; Log out?" classname="yahoo" time="17.56" assertions="3">
+    <testcase name="Can we Log in &amp; Log out?" classname="yahoo" time="40.82" assertions="3">
 
     
 
@@ -16,22 +16,26 @@
     
     </testcase>
   
-    <testcase name="Can we Search &amp; Check Results?" classname="yahoo" time="1.079" assertions="0">
+    <testcase name="Can we Search &amp; Check Results?" classname="yahoo" time="7.162" assertions="2">
+
+    
+
+    
     </testcase>
   
-    <testcase name="Can we change Tabs/Categories?" classname="yahoo" time="1.207" assertions="0">
+    <testcase name="Can we change Tabs/Categories?" classname="yahoo" time="1.557" assertions="0">
     </testcase>
   
-    <testcase name="Can we Sign up?" classname="yahoo" time="0.9600" assertions="0">
+    <testcase name="Can we Sign up?" classname="yahoo" time="1.441" assertions="0">
     </testcase>
   
-    <testcase name="Do we get Daily news?" classname="yahoo" time="1.346" assertions="0">
+    <testcase name="Do we get Daily news?" classname="yahoo" time="2.254" assertions="0">
     </testcase>
   
-    <testcase name="Can we Upvote?" classname="yahoo" time="1.171" assertions="0">
+    <testcase name="Can we Upvote?" classname="yahoo" time="1.329" assertions="0">
     </testcase>
   
-    <testcase name="Can we ask/post questions?" classname="yahoo" time="1.386" assertions="0">
+    <testcase name="Can we ask/post questions?" classname="yahoo" time="2.064" assertions="0">
     </testcase>
   
 
