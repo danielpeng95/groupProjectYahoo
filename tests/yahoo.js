@@ -28,15 +28,16 @@ module.exports = {
         Yahoo
 
     },
-    'Can we Sign up?': browser => {
+    'Do we get daily news?': browser => {
         Yahoo
+            
 
     },
     'Do we get Daily news?': browser => {
         Yahoo
 
     },
-    'Can we Upvote?': browser => {
+    'Check sort/relevance/time?': browser => {
         Yahoo
 
     },
