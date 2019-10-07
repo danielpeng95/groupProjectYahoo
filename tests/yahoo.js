@@ -52,7 +52,20 @@ module.exports = {
 
     },
     'Can we ask/post questions?': browser => { //Daniel
+        // https://www.conversationstarters.com/generator.php
         Yahoo
-
+        var originalWindow = ''
+            .api.windowHandles(result => {
+                originalWindow = result.value[0]
+            })
+        Yahoo
+            .api.openNewWindow()
+        Yahoo
+            .api.windowHandles(function (result) {
+                var handle = result.value[1]
+                Yahoo.switchWindow(handle)
+            })
+        Yahoo
+            .api.switchWindow(originalWindow)
     }
 }
