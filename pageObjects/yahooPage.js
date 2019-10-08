@@ -28,6 +28,7 @@ module.exports = {
         word: '[id="random"]',
         qBox: '.ask-ques-title',
         qSubmit: '[data-ylk="slk:submit"]',
+        qResult: '[class="Fz-24 Fw-300 Mb-10 Wow-bw"]',
 
 
 

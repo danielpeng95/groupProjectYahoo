@@ -99,12 +99,22 @@ module.exports = {
                 console.log(t)
                 Yahoo
                     .setValue('@qBox', t)
+
+                Yahoo
+                    .api.pause(3000)
+                Yahoo
+                    .api.maximizeWindow()
+                Yahoo
+                    .waitForElementVisible('@qSubmit')
+                    .click('@qSubmit')
+                Yahoo
+                    .waitForElementVisible('@logIn')
+                    .setValue('@logIn', ['softwareqa10@yahoo.com', browser.Keys.ENTER])
+                    .waitForElementVisible('@pass')
+                    .setValue('@pass', ['SoftQA1995', browser.Keys.ENTER])
+                    .waitForElementVisible('@qResult')
+                    .verify.containsText('@qResult', t)
             })
-        Yahoo
-            .api.pause(3000)
-        Yahoo
-            .waitForElementVisible('@qSubmit')
-            .click('@qSubmit')
-            .api.pause()
+
     }
 }
