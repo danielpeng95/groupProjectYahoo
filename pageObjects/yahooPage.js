@@ -1,5 +1,6 @@
 
-
+var today = new Date();
+console.log(`This is the current year ${today.getFullYear()}, current month ${today.getMonth()+1}, day of the month ${today.getDate()}, day of the week ${today.getDay()+1}.`)
 module.exports = {
     url: 'https://answers.yahoo.com/',
 
@@ -40,14 +41,19 @@ module.exports = {
         tra: {selector: '(//a[@class=" Mstart-3 unselected D-ib"])[1]', locateStrategy: 'xpath'},
         pro: {selector: '(//a[@class=" Mstart-3 unselected D-ib"])[1]', locateStrategy: 'xpath'},
 
-
-
-
         //Nate
+        //Search and Check results
         searchBar: '[name="p"]',
         searchButton: '.SharedUH_button1_2fHd_',
-        searchResults: '[class=" reg searchCenterMiddle"]'
-
+        searchResults: '[class=" reg searchCenterMiddle"]',
+        //Daily News
+        compTab: '[href="/dir/index?sid=396545660"]',
+        article1: {
+            selector: '(//a[@class="Fz-14 Fw-b Clr-b Wow-bw title"])[1]',
+            locateStrategy: 'xpath'
+        },
+        articleDate: 'span[class="Clr-88 ya-localtime"]',
+        currentDate: 'today'
 
     }
 
