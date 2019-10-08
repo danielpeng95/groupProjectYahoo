@@ -24,6 +24,11 @@ module.exports = {
         catTitle: '[id="ya-sub-category-title"]',
         catResult: '[class="Bgc-bl06 Px-14 Pb-14 Pt-10 Clr-w"]',
 
+        //selectors for posting questions
+        word: '[id="random"]',
+        qBox: '.ask-ques-title',
+        qSubmit: '[data-ylk="slk:submit"]',
+
 
 
         //Nate

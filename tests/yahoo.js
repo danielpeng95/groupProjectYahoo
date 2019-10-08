@@ -7,19 +7,19 @@ function Categ(pageObject) {
             pageObject
                 .scrollDownBy(30) //custom command in the page object
         }
-            pageObject
-                .useXpath()
-                .waitForElementVisible(`(//a[@class=" Mstart-3 unselected D-ib"])[${number}]`, 10000)
-                .click(`(//a[@class=" Mstart-3 unselected D-ib"])[${number}]`)
-                .useCss()
-                .waitForElementVisible('@catTitle')
-                .getText('@catTitle', function (result) {
-                    let t = result.value
-                    console.log(result.value)
-                    pageObject.waitForElementVisible('@catResult')
-                    pageObject.verify.containsText('@catResult', t)
-                })
-            pageObject.api.back()
+        pageObject
+            .useXpath()
+            .waitForElementVisible(`(//a[@class=" Mstart-3 unselected D-ib"])[${number}]`, 10000)
+            .click(`(//a[@class=" Mstart-3 unselected D-ib"])[${number}]`)
+            .useCss()
+            .waitForElementVisible('@catTitle')
+            .getText('@catTitle', function (result) {
+                let t = result.value
+                console.log(result.value)
+                pageObject.waitForElementVisible('@catResult')
+                pageObject.verify.containsText('@catResult', t)
+            })
+        pageObject.api.back()
     }
 }
 
@@ -56,29 +56,55 @@ module.exports = {
     //         .verify.containsText('[class=" reg searchCenterMiddle"]', 'pizza')
 
     // },
-    'Can we change Tabs/Categories?': browser => { //Daniel
-        Yahoo
-        Categ(Yahoo) //function on top of this page
-    },
-    'Do we get Daily news?': browser => { //Nate
-        Yahoo
+    // 'Can we change Tabs/Categories?': browser => { //Daniel
+    //     Yahoo
+    //     Categ(Yahoo) //function on top of this page
+    // },
+    // 'Do we get Daily news?': browser => { //Nate
+    //     Yahoo
 
-    },
-    'Can we ask/post questions?': browser => { //Daniel
-        // https://www.conversationstarters.com/generator.php
-        Yahoo
+    // },
+    'Can we ask/post questions?': browser => { //Daniel 
         var originalWindow = ''
-            .api.windowHandles(result => {
+        var newWindow = ''
+        var t = ''
+
+        Yahoo
+            .api.windowHandles(function (result) { //"nameing" the first window
                 originalWindow = result.value[0]
             })
         Yahoo
             .api.openNewWindow()
         Yahoo
-            .api.windowHandles(function (result) {
-                var handle = result.value[1]
-                Yahoo.switchWindow(handle)
+            .api.windowHandles(function (result) { //"naming" the second window and switching over
+                newWindow = result.value[1]
+                Yahoo
+                    .api.switchWindow(newWindow)
             })
         Yahoo
-            .api.switchWindow(originalWindow)
+            .api.url('https://www.conversationstarters.com/generator.php')
+        Yahoo
+            .waitForElementVisible('@word')
+            .getText('@word', function (result) {
+                t = result.value
+                console.log(result.value)
+
+                Yahoo
+                    .api.windowHandles(function (result) {
+                        Yahoo
+                            .api.switchWindow(originalWindow)
+                    })
+                Yahoo
+                    .waitForElementVisible('@qBox', 8000)
+                console.log(t)
+                Yahoo
+                    .setValue('@qBox', t)
+            })
+        Yahoo
+            .api.pause(3000)
+        Yahoo
+            .waitForElementVisible('@qSubmit')
+            .click('@qSubmit')
+            .api.pause()
     }
 }
