@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
+<<<<<<< HEAD
             failures="0"
             tests="2">
 
@@ -8,10 +9,23 @@
     tests="2" time="7.515" timestamp="">
   
     <testcase name="Can we Search &amp; Check Results?" classname="yahoo" time="3.754" assertions="2">
+=======
+            failures="1"
+            tests="1">
+
+  <testsuite name="yahoo"
+    errors="0" failures="1" hostname="" id="" package="yahoo" skipped="0"
+    tests="1" time="31.83" timestamp="">
+  
+    <testcase name="Can we ask/post questions?" classname="yahoo" time="31.83" assertions="6">
+
+    
+>>>>>>> 17e0674d7b4ed73f603e2906926aee5b232784a7
 
     
 
     
+<<<<<<< HEAD
     </testcase>
   
     <testcase name="Do we get Daily news?" classname="yahoo" time="3.761" assertions="2">
@@ -19,6 +33,15 @@
     
 
     
+=======
+
+    
+
+      <failure message="Timed out while waiting for element &lt;[class=&#34;Fz-24 Fw-300 Mb-10 Wow-bw&#34;]&gt; to be present for 8000 milliseconds. - expected [0;32m&#34;visible&#34;[0m but got: [0;31m&#34;not found&#34;[0m">    at NightwatchAPI.&lt;anonymous&gt; (C:\Users\benpe\DevMountain\groupProjectYahoo\tests\yahoo.js:115:22)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+
+    <failure message="    at NightwatchAPI.&lt;anonymous&gt; (C:\Users\benpe\DevMountain\groupProjectYahoo\tests\yahoo.js:115:22)">    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+>>>>>>> 17e0674d7b4ed73f603e2906926aee5b232784a7
     </testcase>
   
 
