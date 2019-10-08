@@ -1,13 +1,147 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="1"
             failures="0"
-            tests="5">
+            tests="3">
 
   <testsuite name="yahoo"
     errors="1" failures="0" hostname="" id="" package="yahoo" skipped="0"
-    tests="5" time="42.88" timestamp="">
+    tests="3" time="51.24" timestamp="">
   
-    <testcase name="Can we Log in &amp; Log out?" classname="yahoo" time="29.66" assertions="5">
+    <testcase name="Can we change Tabs/Categories?" classname="yahoo" time="49.90" assertions="72">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -20,36 +154,10 @@
     
     </testcase>
   
-    <testcase name="Can we Search &amp; Check Results?" classname="yahoo" time="2.387" assertions="2">
-
-    
-
-    
+    <testcase name="Do we get Daily news?" classname="yahoo" time="0.6750" assertions="0">
     </testcase>
   
-    <testcase name="Can we change Tabs/Categories?" classname="yahoo" time="9.282" assertions="8">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    </testcase>
-  
-    <testcase name="Do we get Daily news?" classname="yahoo" time="0.8240" assertions="0">
-    </testcase>
-  
-    <testcase name="Can we ask/post questions?" classname="yahoo" time="0.7320" assertions="0">
+    <testcase name="Can we ask/post questions?" classname="yahoo" time="0.6670" assertions="0">
     </testcase>
   
 

@@ -1,8 +1,12 @@
 
-
 module.exports = {
     url: 'https://answers.yahoo.com/',
-
+    commands: [{
+        scrollDownBy: function(pixels){ //custom command for scrolling down
+            this.api.execute(`window.scrollBy(0, ${pixels})`)
+            return this
+        }
+    }],
     elements: { //Daniel
         //selectors for log in & log out
         signIn: '[class="SharedUH_signIn_PIot1"]',
