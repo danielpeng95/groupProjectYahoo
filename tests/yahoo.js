@@ -1,6 +1,6 @@
 function Categ(pageObject) {
     var number
-    for (number = 25; number < 28; number++) {
+    for (number = 26; number < 28; number++) {
         pageObject
             // .api.maximizeWindow()
             .api.resizeWindow(1600, 900)
@@ -37,6 +37,10 @@ module.exports = {
             .waitForElementVisible('@pass')
             .setValue('@pass', ['SoftQA1995', browser.Keys.ENTER])
             .verify.containsText('@check', 'Software')
+            .waitForElementVisible('@ID')
+            .click('@ID')
+            .waitForElementVisible('@out')
+            .click('@out')
     },
     'Can we Search & Check Results?': browser => { //Nate
         Yahoo
