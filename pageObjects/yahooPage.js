@@ -20,6 +20,7 @@ module.exports = {
 
 
         //Nate
+        //selectors for search & check results
         searchBar: '[name="p"]',
         searchButton: '.SharedUH_button1_2fHd_',
         searchResults: '[class=" reg searchCenterMiddle"]'
