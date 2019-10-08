@@ -37,8 +37,11 @@ module.exports = {
             .waitForElementVisible('@pass')
             .setValue('@pass', ['SoftQA1995', browser.Keys.ENTER])
             .verify.containsText('@check', 'Software')
+            .api.pause(5000)
+        Yahoo
             .waitForElementVisible('@ID')
             .click('@ID')
+            // .moveToElement('@ID', 10, 10) //this will hover over //will work too
             .waitForElementVisible('@out')
             .click('@out')
     },

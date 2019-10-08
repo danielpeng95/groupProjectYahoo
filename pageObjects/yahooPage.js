@@ -11,7 +11,7 @@ module.exports = {
         pass: '[id="login-passwd"]',
         submit: '[name="verifyPassword"]',
         check: '[class="D(ib) Maw(100px) Ov(h) Whs(nw) Tov(e) Lh($userNavTextLh) Pstart(8px) Fz(14px) Fw(b) Va(t) ua-ie7_D(n) C(#4d00ae)"]',
-        ID: '[id="yui_3_18_0_4_1570550030871_1006"]',
+        ID: 'span[class="D(ib) Maw(100px) Ov(h) Whs(nw) Tov(e) Lh($userNavTextLh) Pstart(8px) Fz(14px) Fw(b) Va(t) ua-ie7_D(n) C(#4d00ae)"]',
         out: '[id="uh-signout"]',
 
 

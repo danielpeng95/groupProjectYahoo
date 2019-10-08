@@ -1,13 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites errors="0"
+<testsuites errors="1"
             failures="0"
-            tests="1">
+            tests="5">
 
   <testsuite name="yahoo"
-    errors="0" failures="0" hostname="" id="" package="yahoo" skipped="0"
-    tests="1" time="14.38" timestamp="">
+    errors="1" failures="0" hostname="" id="" package="yahoo" skipped="0"
+    tests="5" time="42.88" timestamp="">
   
-    <testcase name="Can we change Tabs/Categories?" classname="yahoo" time="14.38" assertions="12">
+    <testcase name="Can we Log in &amp; Log out?" classname="yahoo" time="29.66" assertions="5">
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Can we Search &amp; Check Results?" classname="yahoo" time="2.387" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Can we change Tabs/Categories?" classname="yahoo" time="9.282" assertions="8">
 
     
 
@@ -24,14 +44,12 @@
     
 
     
-
-    
-
-    
-
-    
-
-    
+    </testcase>
+  
+    <testcase name="Do we get Daily news?" classname="yahoo" time="0.8240" assertions="0">
+    </testcase>
+  
+    <testcase name="Can we ask/post questions?" classname="yahoo" time="0.7320" assertions="0">
     </testcase>
   
 
