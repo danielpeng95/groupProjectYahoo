@@ -2,15 +2,18 @@ function Categ(pageObject) {
     var number
     for (number = 25; number < 28; number++) {
         pageObject
+            // .api.maximizeWindow()
             .api.resizeWindow(1600, 900)
         pageObject
             .useXpath()
             .waitForElementVisible(`(//a[@class=" Mstart-3 unselected D-ib"])[${number}]`, 10000)
             .click(`(//a[@class=" Mstart-3 unselected D-ib"])[${number}]`)
             .useCss()
+            .waitForElementVisible('@catTitle')
             .getText('@catTitle', function (result) {
                 let t = result.value
                 console.log(result.value)
+                pageObject.waitForElementVisible('@catResult')
                 pageObject.verify.containsText('@catResult', t)
             })
         pageObject.api.back()
