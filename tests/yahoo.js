@@ -40,56 +40,33 @@ module.exports = {
     //         .waitForElementVisible('@pass')
     //         .setValue('@pass', ['SoftQA1995', browser.Keys.ENTER])
     //         .verify.containsText('@check', 'Software')
+    //         .api.pause(5000)
+    //     Yahoo
+    //         .waitForElementVisible('@ID')
+    //         .click('@ID')
+    //         // .moveToElement('@ID', 10, 10) //this will hover over //will work too
+    //         .waitForElementVisible('@out')
+    //         .click('@out')
     // },
-    'Can we Log in & Log out?': browser => { //Daniel
-        Yahoo
-            .click('@signIn')
-            .waitForElementVisible('@logIn')
-            .setValue('@logIn', ['softwareqa10@yahoo.com', browser.Keys.ENTER])
-            .waitForElementVisible('@pass')
-            .setValue('@pass', ['SoftQA1995', browser.Keys.ENTER])
-            .verify.containsText('@check', 'Software')
-            .api.pause(5000)
-        Yahoo
-            .waitForElementVisible('@ID')
-            .click('@ID')
-            // .moveToElement('@ID', 10, 10) //this will hover over //will work too
-            .waitForElementVisible('@out')
-            .click('@out')
-    },
-    'Can we Search & Check Results?': browser => { //Nate
-        Yahoo
-            .waitForElementVisible('@searchBar')
-            .setValue('@searchBar', 'pizza')
-            .click('@searchButton')
-            .verify.containsText('[class=" reg searchCenterMiddle"]', 'pizza')
+    // 'Can we Search & Check Results?': browser => { //Nate
+    //     Yahoo
+    //         .waitForElementVisible('@searchBar')
+    //         .setValue('@searchBar', 'pizza')
+    //         .click('@searchButton')
+    //         .verify.containsText('[class=" reg searchCenterMiddle"]', 'pizza')
 
+    // },
+    // 'Do we get Daily news?': browser => { //Nate
+    //     Yahoo
+    //         .click('@compTab')
+    //         .waitForElementVisible('@article1')
+    //         .click('@article1')
+    //         .verify.containsText('@articleDate', 'hours')
     // },
     // 'Can we change Tabs/Categories?': browser => { //Daniel
     //     Yahoo
-    //         Categ(Yahoo)
-
-    },
-    'Do we get Daily news?': browser => { //Nate
-        Yahoo
-            .click('@compTab')
-            .waitForElementVisible('@article1')
-            .click('@article1')
-            .verify.containsText('@articleDate', 'hours')
-            
-
+    //     Categ(Yahoo) //function on top of this page
     // },
-    // 'Can we ask/post questions?': browser => { //Daniel
-    //     Yahoo
-    },
-    'Can we change Tabs/Categories?': browser => { //Daniel
-        Yahoo
-        Categ(Yahoo) //function on top of this page
-    },
-    'Do we get Daily news?': browser => { //Nate
-        Yahoo
-
-    },
     'Can we ask/post questions?': browser => { //Daniel 
         var originalWindow = ''
         var newWindow = ''
@@ -114,33 +91,31 @@ module.exports = {
             .getText('@word', function (result) {
                 t = result.value
                 console.log(result.value)
-
-                Yahoo
-                    .api.windowHandles(function (result) {
-                        Yahoo
-                            .api.switchWindow(originalWindow)
-                    })
-                Yahoo
-                    .waitForElementVisible('@qBox', 8000)
-                console.log(t)
-                Yahoo
-                    .setValue('@qBox', t)
-
-                Yahoo
-                    .api.pause(3000)
-                Yahoo
-                    .api.maximizeWindow()
-                Yahoo
-                    .waitForElementVisible('@qSubmit')
-                    .click('@qSubmit')
-                Yahoo
-                    .waitForElementVisible('@logIn')
-                    .setValue('@logIn', ['softwareqa10@yahoo.com', browser.Keys.ENTER])
-                    .waitForElementVisible('@pass')
-                    .setValue('@pass', ['SoftQA1995', browser.Keys.ENTER])
-                    // .waitForElementVisible('@qResult', 8000) //there is a daily question limit. once i reach it, this will not work
-                    // .verify.containsText('@qResult', t)
             })
+        Yahoo
+            .api.windowHandles(function (result) {
+                Yahoo
+                    .api.switchWindow(originalWindow)
+            })
+        Yahoo
+            .waitForElementVisible('@qBox', 8000)
+        console.log(t)
+        Yahoo
+            .setValue('@qBox', t)
 
+        Yahoo
+            .api.pause(3000)
+        Yahoo
+            .api.maximizeWindow()
+        Yahoo
+            .waitForElementVisible('@qSubmit')
+            .click('@qSubmit')
+        Yahoo
+            .waitForElementVisible('@logIn')
+            .setValue('@logIn', ['softwareqa10@yahoo.com', browser.Keys.ENTER])
+            .waitForElementVisible('@pass')
+            .setValue('@pass', ['SoftQA1995', browser.Keys.ENTER])
+        // .waitForElementVisible('@qResult', 8000) //there is a daily question limit. once i reach it, this will not work
+        // .verify.containsText('@qResult', t)
     }
 }
