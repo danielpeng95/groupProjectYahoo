@@ -1,7 +1,7 @@
 
 var today = new Date();
 
-console.log(`This is the current year ${today.getFullYear()}, current month ${today.getMonth()+1}, day of the month ${today.getDate()}, day of the week ${today.getDay()+1}.`)
+// console.log(`This is the current year ${today.getFullYear()}, current month ${today.getMonth()+1}, day of the month ${today.getDate()}, day of the week ${today.getDay()+1}.`)
 
 module.exports = {
     url: 'https://answers.yahoo.com/',
@@ -26,6 +26,7 @@ module.exports = {
         //selectors for tabs/categories
         cat: {selector: '(//a[@class=" Mstart-3 unselected D-ib"])[1]', locateStrategy: 'xpath'},
         catTitle: '[id="ya-sub-category-title"]',
+
         catResult: '[class="Bgc-bl06 Px-14 Pb-14 Pt-10 Clr-w"]',
 
         //selectors for posting questions

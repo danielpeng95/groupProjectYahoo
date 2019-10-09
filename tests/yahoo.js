@@ -11,15 +11,14 @@ function Categ(pageObject) {
             .useXpath()
             .waitForElementVisible(`(//a[@class=" Mstart-3 unselected D-ib"])[${number}]`, 10000)
             .click(`(//a[@class=" Mstart-3 unselected D-ib"])[${number}]`)
-            .useCss()
-            .waitForElementVisible('@catTitle')
-            .getText('@catTitle', function (result) {
-                let t = result.value
+            .getText(`(//a[@class=" Mstart-3 unselected D-ib"])[${number}]`, function (result) {
                 console.log(result.value)
-                pageObject.waitForElementVisible('@catResult')
-                pageObject.verify.containsText('@catResult', t)
+                pageObject
+                    .useCss()
+                    .waitForElementVisible('@catTitle', 10000) //not yet ready
+                    .verify.containsText('@catTitle', result.value) //not yet ready\
+                    .api.back()
             })
-        pageObject.api.back()
     }
 }
 
@@ -63,59 +62,60 @@ module.exports = {
     //         .click('@article1')
     //         .verify.containsText('@articleDate', 'hours')
     // },
-    // 'Can we change Tabs/Categories?': browser => { //Daniel
+    'Can we change Tabs/Categories?': browser => { //Daniel
+        Yahoo
+        Categ(Yahoo) //function on top of this page
+    },
+    // 'Can we ask/post questions?': browser => { //Daniel 
+    //     var originalWindow = ''
+    //     var newWindow = ''
+    //     var t = ''
+
     //     Yahoo
-    //     Categ(Yahoo) //function on top of this page
-    // },
-    'Can we ask/post questions?': browser => { //Daniel 
-        var originalWindow = ''
-        var newWindow = ''
-        var t = ''
+    //         .api.windowHandles(function (result) { //"nameing" the first window
+    //             originalWindow = result.value[0]
+    //         })
+    //     Yahoo
+    //         .api.openNewWindow()
+    //     Yahoo
+    //         .api.windowHandles(function (result) { //"naming" the second window and switching over
+    //             newWindow = result.value[1]
+    //             Yahoo
+    //                 .api.switchWindow(newWindow)
+    //         })
+    //     Yahoo
+    //         .api.url('https://www.conversationstarters.com/generator.php')
+    //     Yahoo
+    //         .waitForElementVisible('@word')
+    //         .getText('@word', function (result) {
+    //             t = result.value
+    //             console.log(result.value)
+    //             // console.log(t)
+    //         })
+    //     Yahoo
+    //         .api.windowHandles(function (result) {
+    //             Yahoo
+    //                 .api.switchWindow(originalWindow)
+    //         })
+    //     Yahoo
+    //         .api.maximizeWindow()
+    //     Yahoo
+    //         .waitForElementVisible('@qBox', 8000)
+    //     // .perform(() => console.log(`This is post getText: ${t}`)) //perform is unique, it ques it up normallly now
+    //     Yahoo
+    //         .perform(() => Yahoo.setValue('@qBox', t))
 
-        Yahoo
-            .api.windowHandles(function (result) { //"nameing" the first window
-                originalWindow = result.value[0]
-            })
-        Yahoo
-            .api.openNewWindow()
-        Yahoo
-            .api.windowHandles(function (result) { //"naming" the second window and switching over
-                newWindow = result.value[1]
-                Yahoo
-                    .api.switchWindow(newWindow)
-            })
-        Yahoo
-            .api.url('https://www.conversationstarters.com/generator.php')
-        Yahoo
-            .waitForElementVisible('@word')
-            .getText('@word', function (result) {
-                t = result.value
-                console.log(result.value)
-            })
-        Yahoo
-            .api.windowHandles(function (result) {
-                Yahoo
-                    .api.switchWindow(originalWindow)
-            })
-        Yahoo
-            .waitForElementVisible('@qBox', 8000)
-        console.log(t)
-        Yahoo
-            .setValue('@qBox', t)
-
-        Yahoo
-            .api.pause(3000)
-        Yahoo
-            .api.maximizeWindow()
-        Yahoo
-            .waitForElementVisible('@qSubmit')
-            .click('@qSubmit')
-        Yahoo
-            .waitForElementVisible('@logIn')
-            .setValue('@logIn', ['softwareqa10@yahoo.com', browser.Keys.ENTER])
-            .waitForElementVisible('@pass')
-            .setValue('@pass', ['SoftQA1995', browser.Keys.ENTER])
-        // .waitForElementVisible('@qResult', 8000) //there is a daily question limit. once i reach it, this will not work
-        // .verify.containsText('@qResult', t)
-    }
+    //     Yahoo
+    //         .api.pause(3000)
+    //     Yahoo
+    //         .waitForElementVisible('@qSubmit', 8000)
+    //         .click('@qSubmit')
+    //     Yahoo
+    //         .waitForElementVisible('@logIn')
+    //         .setValue('@logIn', ['softwareqa10@yahoo.com', browser.Keys.ENTER])
+    //         .waitForElementVisible('@pass')
+    //         .setValue('@pass', ['SoftQA1995', browser.Keys.ENTER])
+    //         .waitForElementVisible('@qResult', 8000) //there is a daily question limit. once i reach it, this will not work
+    //         .verify.containsText('@qResult', t)
+    // }
 }
