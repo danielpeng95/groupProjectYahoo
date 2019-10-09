@@ -1,22 +1,49 @@
+// function Categ(pageObject) {
+//     var number
+//     for (number = 10; number < 28; number++) {
+//         pageObject
+//         // .api.resizeWindow(1600, 900) //don't need this now that we have scrollDown
+//         if (number > 10) {
+//             pageObject
+//                 .scrollDownBy(30) //custom command in the page object
+//         }
+//         pageObject
+//             .useXpath()
+//             .waitForElementVisible(`(//a[@class=" Mstart-3 unselected D-ib"])[${number}]`, 10000)
+//             .click(`(//a[@class=" Mstart-3 unselected D-ib"])[${number}]`)
+//             .getText(`(//a[@class=" Mstart-3 unselected D-ib"])[${number}]`, function (result) {
+//                 console.log(result.value)
+//                 pageObject
+//                     .useCss()
+//                     .waitForElementVisible('@catTitle', 10000) //not yet ready
+//                     .verify.containsText('@catTitle', result.value) //not yet ready\
+//                     .api.back()
+//             })
+//     }
+// }
+
 function Categ(pageObject) {
     var number
-    for (number = 10; number < 28; number++) {
-        pageObject
-        // .api.resizeWindow(1600, 900) //don't need this now that we have scrollDown
+    for (number = 1; number < 28; number++) {
         if (number > 10) {
             pageObject
                 .scrollDownBy(30) //custom command in the page object
         }
+        let count = number; // <----- added this so that there'd be a local variable that held the right value of "number" by the time nightwatch executed the queue'd commands
         pageObject
             .useXpath()
-            .waitForElementVisible(`(//a[@class=" Mstart-3 unselected D-ib"])[${number}]`, 10000)
-            .click(`(//a[@class=" Mstart-3 unselected D-ib"])[${number}]`)
-            .getText(`(//a[@class=" Mstart-3 unselected D-ib"])[${number}]`, function (result) {
+            .waitForElementVisible(`(//a[@class=" Mstart-3 unselected D-ib"])[${count}]`, 10000)
+        pageObject
+            .getText(`(//a[@class=" Mstart-3 unselected D-ib"])[${count}]`, function (result) {
                 console.log(result.value)
                 pageObject
+                    .click(`(//a[@class=" Mstart-3 unselected D-ib"])[${count}]`) //moved this so that we'd get text then click and not confuse it maybe getting text during a load.
                     .useCss()
-                    .waitForElementVisible('@catTitle', 10000) //not yet ready
-                    .verify.containsText('@catTitle', result.value) //not yet ready\
+                    // I commented this out, because I think it's pulling the value before the page has moved.
+                    // .waitForElementVisible('@catTitle', 10000) //not yet ready
+                    // .verify.containsText('@catTitle', result.value) //not yet ready\
+                    .expect.element("@catTitle").text.to.contain(result.value).before(10000)//just saying it should load before 10 seconds
+                pageObject
                     .api.back()
             })
     }
