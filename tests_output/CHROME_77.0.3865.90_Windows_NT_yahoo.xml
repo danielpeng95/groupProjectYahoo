@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites errors="1"
-            failures="2"
-            tests="5">
+<testsuites errors="0"
+            failures="1"
+            tests="6">
 
   <testsuite name="yahoo"
-    errors="1" failures="2" hostname="" id="" package="yahoo" skipped="1"
-    tests="5" time="259.9" timestamp="">
+    errors="0" failures="1" hostname="" id="" package="yahoo" skipped="0"
+    tests="6" time="180.0" timestamp="">
   
-    <testcase name="Can we Log in &amp; Log out?" classname="yahoo" time="124.8" assertions="5">
+    <testcase name="Can we Log in &amp; Log out?" classname="yahoo" time="59.36" assertions="5">
 
     
 
@@ -20,152 +20,154 @@
     
     </testcase>
   
-    <testcase name="Can we Search &amp; Check Results?" classname="yahoo" time="14.32" assertions="2">
+    <testcase name="Can we Search &amp; Check Results?" classname="yahoo" time="3.709" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="Do we get Daily news?" classname="yahoo" time="11.14" assertions="2">
+    <testcase name="Do we get Daily news?" classname="yahoo" time="6.758" assertions="2">
 
-      <failure message="Testing if element &lt;Element [name=@articleDate]&gt; contains text: &#34;hours&#34; in 1000 ms. - expected [0;32m&#34;hours&#34;[0m but got: [0;31m&#34;· 38 mins ago&#34;[0m">    at Object.Do we get Daily news? (C:\Users\benpe\DevMountain\groupProjectYahoo\tests\yahoo.js:105:21)</failure>
-
-    
-    </testcase>
-  
-    <testcase name="Can we change Tabs/Categories?" classname="yahoo" time="85.69" assertions="54">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
+      <failure message="Testing if element &lt;Element [name=@articleDate]&gt; contains text: &#34;hours&#34; in 1000 ms. - expected [0;32m&#34;hours&#34;[0m but got: [0;31m&#34;· 46 mins ago&#34;[0m">    at Object.Do we get Daily news? (C:\Users\benpe\DevMountain\groupProjectYahoo\tests\yahoo.js:105:21)</failure>
 
     
     </testcase>
   
-    <testcase name="Can we ask/post questions?" classname="yahoo" time="23.95" assertions="4">
+    <testcase name="Can we change Tabs/Categories?" classname="yahoo" time="75.34" assertions="54">
 
     
 
     
 
-      <failure message="Timed out while waiting for element &lt;.ask-ques-title&gt; to be present for 8000 milliseconds. - expected [0;32m&#34;visible&#34;[0m but got: [0;31m&#34;not found&#34;[0m">    at Object.Can we ask/post questions? (C:\Users\benpe\DevMountain\groupProjectYahoo\tests\yahoo.js:164:14)</failure>
+    
 
     
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Can we ask/post questions?" classname="yahoo" time="25.79" assertions="7">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Check sort by relevance/time" classname="yahoo" time="8.998" assertions="0">
     </testcase>
   
 
   
 
-  
-    
-    <testcase
-      name="Check sort by relevance/time" classname="yahoo">
-      <skipped />
-    </testcase>
-    
   
   </testsuite>
 </testsuites>
