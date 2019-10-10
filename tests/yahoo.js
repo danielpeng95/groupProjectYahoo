@@ -100,6 +100,7 @@ module.exports = {
 
     },
     'Do we get relevant replies to tech questions?': browser => { //Nate
+        fs.writeFileSync('./testAssets/timeCheck.txt', " ")
         Yahoo
             .click('@compTab')
             .waitForElementVisible('@article1')
@@ -119,9 +120,9 @@ module.exports = {
                 t = splitText
                 console.log(`this is the sliced and diced t: ${t}`)
                 if (t == "hour" || t == "mins" || t == "hours" || t == "min") {
-                        fs.writeFileSync('./testAssets/timeCheck.txt', "reply is within a day")
+                    fs.writeFileSync('./testAssets/timeCheck.txt', "reply is within a day")
                 }
-                else{
+                else {
                     fs.writeFileSync('./testAssets/timeCheck.txt', "reply is over a day")
                 }
             })
