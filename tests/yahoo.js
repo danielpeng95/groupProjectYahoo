@@ -73,30 +73,30 @@ module.exports = {
     after: browser => {
         Yahoo.end()
     },
-    // 'Can we Log in & Log out?': browser => { //Daniel
-    //     Yahoo
-    //         .click('@signIn')
-    //         .waitForElementVisible('@logIn')
-    //         .setValue('@logIn', ['softwareqa10@yahoo.com', browser.Keys.ENTER])
-    //         .waitForElementVisible('@pass')
-    //         .setValue('@pass', ['SoftQA1995', browser.Keys.ENTER])
-    //         .verify.containsText('@check', 'Software')
-    //         .api.pause(2000)
-    //     Yahoo
-    //         .waitForElementVisible('@ID')
-    //         .click('@ID')
-    //         // .moveToElement('@ID', 10, 10) //this will hover over //will work too
-    //         .waitForElementVisible('@out')
-    //         .click('@out')
-    // },
-    // 'Can we Search & Check Results?': browser => { //Nate
-    //     Yahoo
-    //         .waitForElementVisible('@searchBar')
-    //         .setValue('@searchBar', 'pizza')
-    //         .click('@searchButton')
-    //         .verify.containsText('[class=" reg searchCenterMiddle"]', 'pizza')
+    'Can we Log in & Log out?': browser => { //Daniel
+        Yahoo
+            .click('@signIn')
+            .waitForElementVisible('@logIn')
+            .setValue('@logIn', ['softwareqa10@yahoo.com', browser.Keys.ENTER])
+            .waitForElementVisible('@pass')
+            .setValue('@pass', ['SoftQA1995', browser.Keys.ENTER])
+            .verify.containsText('@check', 'Software')
+            .api.pause(2000)
+        Yahoo
+            .waitForElementVisible('@ID')
+            .click('@ID')
+            // .moveToElement('@ID', 10, 10) //this will hover over //will work too
+            .waitForElementVisible('@out')
+            .click('@out')
+    },
+    'Can we Search & Check Results?': browser => { //Nate
+        Yahoo
+            .waitForElementVisible('@searchBar')
+            .setValue('@searchBar', 'pizza')
+            .click('@searchButton')
+            .verify.containsText('[class=" reg searchCenterMiddle"]', 'pizza')
 
-    // },
+    },
     'Do we get Daily news?': browser => { //Nate
         Yahoo
             .click('@compTab')
@@ -105,7 +105,6 @@ module.exports = {
             .getText('@articleDate', function(result){
                 console.log(result.value)
             })
-            .verify.containsText('@articleDate', 'hour')
     },
     'Can we change Tabs/Categories?': browser => { //Daniel
         Yahoo
