@@ -102,7 +102,7 @@ module.exports = {
             .click('@compTab')
             .waitForElementVisible('@article1')
             .click('@article1')
-            .verify.containsText('@articleDate', 'hours')
+            .verify.containsText('@articleDate', 'hours')//not fixed within 1 hour
     },
     'Can we change Tabs/Categories?': browser => { //Daniel
         Yahoo
@@ -126,24 +126,6 @@ module.exports = {
                 Yahoo
                     .api.switchWindow(newWindow)
             })
-        Yahoo
-            .api.url('https://www.conversationstarters.com/generator.php')
-        Yahoo
-            .waitForElementVisible('@word')
-            .getText('@word', function (result) {
-                t = result.value
-                console.log(result.value)
-            })
-        Yahoo
-            .api.windowHandles(function (result) {
-                Yahoo
-                    .api.switchWindow(originalWindow)
-            })
-        Yahoo
-            .waitForElementVisible('@qBox', 8000)
-        console.log(t)
-        Yahoo
-            .setValue('@qBox', t)
         Yahoo
             .api.url('https://www.conversationstarters.com/generator.php')
         Yahoo
@@ -202,5 +184,8 @@ module.exports = {
             .perform(() => {
                 Yahoo
                 dateComp(Yahoo, date1, date2)
+            })
+        }   
+}
 
 

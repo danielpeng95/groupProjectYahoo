@@ -1,6 +1,6 @@
 
 var today = new Date();
-console.log(`This is the current year ${today.getFullYear()}, current month ${today.getMonth()+1}, day of the month ${today.getDate()}, day of the week ${today.getDay()+1}.`)
+//console.log(`This is the current year ${today.getFullYear()}, current month ${today.getMonth()+1}, day of the month ${today.getDate()}, day of the week ${today.getDay()+1}.`)
 
 module.exports = {
     url: 'https://answers.yahoo.com/',
@@ -11,7 +11,7 @@ module.exports = {
         }
     }],
     
-    elements: { //Daniel
+    
     elements: {
         //Daniel
         //selectors for log in & log out
