@@ -26,35 +26,35 @@ function Categ(pageObject) {
     }
 }
 
- function dateComp(browser, date1, date2){
+function dateComp(browser, date1, date2) {
     browser
     var yearDate1 = date1.slice(8)
     var yearDate2 = date2.slice(8)
-    var monthDate1 = date1.slice(5,7)
-    var monthDate2 = date2.slice(5,7)
-    var dayDate1 = date1.slice(1,4)
-    var dayDate2 = date2.slice(1,4)
+    var monthDate1 = date1.slice(5, 7)
+    var monthDate2 = date2.slice(5, 7)
+    var dayDate1 = date1.slice(1, 4)
+    var dayDate2 = date2.slice(1, 4)
     console.log(yearDate1, monthDate1, dayDate1)
-    if(yearDate1>yearDate2){
-        
-        console.log('2nd article year',yearDate2,'is less than', yearDate1)
-        
+    if (yearDate1 > yearDate2) {
+
+        console.log('2nd article year', yearDate2, 'is less than', yearDate1)
+
     }
-    else if(yearDate1=yearDate2){
-        if(monthDate1>monthDate2){
-            console.log('2nd article month',monthDate2,'is less than', monthDate1)
+    else if (yearDate1 = yearDate2) {
+        if (monthDate1 > monthDate2) {
+            console.log('2nd article month', monthDate2, 'is less than', monthDate1)
             return true
         }
-        else if(monthDate1=monthDate2){
-            if(dayDate1>=dayDate2){
-                console.log('2nd article day', dayDate2,'is less than or equal to', dayDate1)
+        else if (monthDate1 = monthDate2) {
+            if (dayDate1 >= dayDate2) {
+                console.log('2nd article day', dayDate2, 'is less than or equal to', dayDate1)
                 return true
             }
-            else{
+            else {
                 return false
             }
         }
-        else{
+        else {
             return false
         }
     }
@@ -73,28 +73,77 @@ module.exports = {
     after: browser => {
         Yahoo.end()
     },
-    
-
-    'Check sort by relevance/time': browser => {
-        var date1
-        var date2
+    'Can we Log in & Log out?': browser => { //Daniel
         Yahoo
-            .setValue('@searchBar', ['walrus', browser.Keys.ENTER])
-            .pause(5000)
-            // .verify.containsText('@relevance1','walrus'||'Walrus') 
-            // .verify.containsText('@relevance2','walrus')
-            // .verify.containsText('@relevance3','walrus')
-            .click('@timeSort')
+            .click('@signIn')
+            .waitForElementVisible('@logIn')
+            .setValue('@logIn', ['softwareqa10@yahoo.com', browser.Keys.ENTER])
+            .waitForElementVisible('@pass')
+            .setValue('@pass', ['SoftQA1995', browser.Keys.ENTER])
+            .verify.containsText('@check', 'Software')
+            .api.pause(5000)
+        Yahoo
+            .waitForElementVisible('@ID')
+            .click('@ID')
+            // .moveToElement('@ID', 10, 10) //this will hover over //will work too
+            .waitForElementVisible('@out')
+            .click('@out')
+    },
+    'Can we Search & Check Results?': browser => { //Nate
+        Yahoo
+            .waitForElementVisible('@searchBar')
+            .setValue('@searchBar', 'pizza')
+            .click('@searchButton')
+            .verify.containsText('[class=" reg searchCenterMiddle"]', 'pizza')
 
-            .getText('@articleDate1', function(result){
-                date1 = result.value
+    },
+    'Do we get Daily news?': browser => { //Nate
+        Yahoo
+            .click('@compTab')
+            .waitForElementVisible('@article1')
+            .click('@article1')
+            .verify.containsText('@articleDate', 'hours')
+    },
+    'Can we change Tabs/Categories?': browser => { //Daniel
+        Yahoo
+        Categ(Yahoo) //function on top of this page
+    },
+
+    'Can we ask/post questions?': browser => { //Daniel 
+        var originalWindow = ''
+        var newWindow = ''
+        var t = ''
+
+        Yahoo
+            .api.windowHandles(function (result) { //"nameing" the first window
+                originalWindow = result.value[0]
             })
-            .getText('@articleDate1', function(result){
-                date2 = result.value
-            })
-            .perform(()=>{
+        Yahoo
+            .api.openNewWindow()
+        Yahoo
+            .api.windowHandles(function (result) { //"naming" the second window and switching over
+                newWindow = result.value[1]
                 Yahoo
-                dateComp(Yahoo, date1, date2)
+                    .api.switchWindow(newWindow)
+            })
+        Yahoo
+            .api.url('https://www.conversationstarters.com/generator.php')
+        Yahoo
+            .waitForElementVisible('@word')
+            .getText('@word', function (result) {
+                t = result.value
+                console.log(result.value)
+            })
+        Yahoo
+            .api.windowHandles(function (result) {
+                Yahoo
+                    .api.switchWindow(originalWindow)
+            })
+        Yahoo
+            .waitForElementVisible('@qBox', 8000)
+        console.log(t)
+        Yahoo
+            .setValue('@qBox', t)
         Yahoo
             .api.url('https://www.conversationstarters.com/generator.php')
         Yahoo
@@ -129,5 +178,29 @@ module.exports = {
             .setValue('@pass', ['SoftQA1995', browser.Keys.ENTER])
             .waitForElementVisible('@qResult', 8000) //there is a daily question limit. once i reach it, this will not work
             .verify.containsText('@qResult', t)
-    }
-}
+    },
+
+
+
+    'Check sort by relevance/time': browser => {
+        var date1
+        var date2
+        Yahoo
+            .setValue('@searchBar', ['walrus', browser.Keys.ENTER])
+            .pause(5000)
+            // .verify.containsText('@relevance1','walrus'||'Walrus') 
+            // .verify.containsText('@relevance2','walrus')
+            // .verify.containsText('@relevance3','walrus')
+            .click('@timeSort')
+
+            .getText('@articleDate1', function (result) {
+                date1 = result.value
+            })
+            .getText('@articleDate1', function (result) {
+                date2 = result.value
+            })
+            .perform(() => {
+                Yahoo
+                dateComp(Yahoo, date1, date2)
+
+
