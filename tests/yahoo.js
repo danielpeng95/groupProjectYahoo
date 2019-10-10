@@ -1,4 +1,6 @@
 
+var fs = require("fs")
+
 function Categ(pageObject) {
     var number
     for (number = 1; number < 28; number++) {
@@ -81,7 +83,7 @@ module.exports = {
             .waitForElementVisible('@pass')
             .setValue('@pass', ['SoftQA1995', browser.Keys.ENTER])
             .verify.containsText('@check', 'Software')
-            .api.pause(5000)
+            .api.pause(2000)
         Yahoo
             .waitForElementVisible('@ID')
             .click('@ID')
@@ -97,12 +99,29 @@ module.exports = {
             .verify.containsText('[class=" reg searchCenterMiddle"]', 'pizza')
 
     },
-    'Do we get Daily news?': browser => { //Nate
+    'Do we get relevant replies to tech questions?': browser => { //Nate
         Yahoo
             .click('@compTab')
             .waitForElementVisible('@article1')
+            .api.pause(1000)
+        Yahoo
             .click('@article1')
-            .verify.containsText('@articleDate', 'hours')//not fixed within 1 hour
+            .api.pause(1000)
+        Yahoo
+            .waitForElementVisible('@articleDate')
+            .getText('@articleDate', function (result) {
+                console.log(result.value)
+                var t = result.value
+                let splitText = t.split(" ")
+                splitText.pop()
+                splitText.shift()
+                splitText.shift()
+                t = splitText
+                console.log(`this is the sliced and diced t: ${t}`)
+                if (t == "hour" || t == "mins" || t == "hours" || t == "min") {
+                        fs.writeFileSync('./testAssets/timeCheck.txt', "Relevant reply")
+                }
+            })
     },
     'Can we change Tabs/Categories?': browser => { //Daniel
         Yahoo
@@ -185,7 +204,7 @@ module.exports = {
                 Yahoo
                 dateComp(Yahoo, date1, date2)
             })
-        }   
+    }
 }
 
 
