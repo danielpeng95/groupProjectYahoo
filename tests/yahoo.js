@@ -81,7 +81,7 @@ module.exports = {
             .waitForElementVisible('@pass')
             .setValue('@pass', ['SoftQA1995', browser.Keys.ENTER])
             .verify.containsText('@check', 'Software')
-            .api.pause(5000)
+            .api.pause(2000)
         Yahoo
             .waitForElementVisible('@ID')
             .click('@ID')
@@ -126,24 +126,6 @@ module.exports = {
                 Yahoo
                     .api.switchWindow(newWindow)
             })
-        Yahoo
-            .api.url('https://www.conversationstarters.com/generator.php')
-        Yahoo
-            .waitForElementVisible('@word')
-            .getText('@word', function (result) {
-                t = result.value
-                console.log(result.value)
-            })
-        Yahoo
-            .api.windowHandles(function (result) {
-                Yahoo
-                    .api.switchWindow(originalWindow)
-            })
-        Yahoo
-            .waitForElementVisible('@qBox', 8000)
-        console.log(t)
-        Yahoo
-            .setValue('@qBox', t)
         Yahoo
             .api.url('https://www.conversationstarters.com/generator.php')
         Yahoo
@@ -202,5 +184,6 @@ module.exports = {
             .perform(() => {
                 Yahoo
                 dateComp(Yahoo, date1, date2)
-
-
+            })
+        }
+}
