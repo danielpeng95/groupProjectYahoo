@@ -1,21 +1,5 @@
-15:35:10.846 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.59, revision: e82be7d358
-15:35:10.927 INFO [GridLauncherV3.lambda$buildLaunchers$3] - Launching a standalone Selenium Server on port 4444
-2019-10-10 15:35:10.992:INFO::main: Logging initialized @427ms to org.seleniumhq.jetty9.util.log.StdErrLog
-15:35:11.306 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
-15:35:12.045 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4444
-15:35:13.063 INFO [ActiveSessionFactory.apply] - Capabilities are: {
-  "acceptSslCerts": true,
-  "browserName": "chrome",
-  "chromeOptions": {
-    "w3c": false
-  },
-  "name": "Yahoo"
-}
-15:35:13.065 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.chrome.ChromeDriverService)
-Starting ChromeDriver 77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}) on port 33570
-Only local connections are allowed.
-Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-[1570743323.236][WARNING]: Timed out connecting to Chrome, retrying...
-15:35:25.396 INFO [ProtocolHandshake.createSession] - Detected dialect: OSS
-15:35:28.078 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session e0a85e36dabdbb14a08f93700d4dafe4 (org.openqa.selenium.chrome.ChromeDriverService)
-15:36:02.269 INFO [ActiveSessions$1.onStop] - Removing session e0a85e36dabdbb14a08f93700d4dafe4 (org.openqa.selenium.chrome.ChromeDriverService)
+15:49:10.967 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.59, revision: e82be7d358
+15:49:11.058 INFO [GridLauncherV3.lambda$buildLaunchers$3] - Launching a standalone Selenium Server on port 4444
+2019-10-10 15:49:11.125:INFO::main: Logging initialized @399ms to org.seleniumhq.jetty9.util.log.StdErrLog
+15:49:11.410 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
+15:49:12.163 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4444

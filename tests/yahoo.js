@@ -119,7 +119,10 @@ module.exports = {
                 t = splitText
                 console.log(`this is the sliced and diced t: ${t}`)
                 if (t == "hour" || t == "mins" || t == "hours" || t == "min") {
-                        fs.writeFileSync('./testAssets/timeCheck.txt', "Relevant reply")
+                        fs.writeFileSync('./testAssets/timeCheck.txt', "reply is within a day")
+                }
+                else{
+                    fs.writeFileSync('./testAssets/timeCheck.txt', "reply is over a day")
                 }
             })
     },
