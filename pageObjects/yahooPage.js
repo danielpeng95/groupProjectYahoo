@@ -1,6 +1,7 @@
 
 var today = new Date();
 console.log(`This is the current year ${today.getFullYear()}, current month ${today.getMonth()+1}, day of the month ${today.getDate()}, day of the week ${today.getDay()+1}.`)
+
 module.exports = {
     url: 'https://answers.yahoo.com/',
     commands: [{
@@ -9,6 +10,7 @@ module.exports = {
             return this
         }
     }],
+    
     elements: { //Daniel
         //selectors for log in & log out
         signIn: '[class="SharedUH_signIn_PIot1"]',
@@ -48,7 +50,44 @@ module.exports = {
             locateStrategy: 'xpath'
         },
         articleDate: 'span[class="Clr-88 ya-localtime"]',
-        currentDate: 'today'
-
-    }    
+        currentDate: 'today',
+        //Sort
+        relevance1: 'div[class="dd algo fst AnswrsV2"]',
+        relevance2: {
+            selector: '(//div[@class="dd algo AnswrsV2"])[4]',
+            locateStrategy: 'xpath',
+        },
+        relevance3: {
+            selector: 'div[class="dd algo lst AnswrsV2"]',
+            locateStrategy: 'xpath',
+        },
+        timeSort: {
+            selector: '(//span[@class="txt"])[2]',
+            locateStrategy: 'xpath'
+        },
+        // timeSort1: 'div[class="dd algo fst AnswrsV2"]',
+        // timeSort2: {
+        //     selector: '(//div[@class="dd algo AnswrsV2"])[3]',
+        //     locateStrategy: 'xpath'
+        // },
+        // timeSort3: '(//div[@class="dd algo AnswrsV2"])[5]',
+        // timeSort4: 'div[class="dd algo lst AnswrsV2"]',
+        articleDate1: {
+            selector: '(//span[@class=" fc-4th"])[2]',
+            locateStrategy: 'xpath'
+        }, 
+        articleDate2: {
+            selector: '(//span[@class=" fc-4th"])[8]',
+            locateStrategy: 'xpath'
+        },
+        articleDate3: {
+            selector: '(//span[@class=" fc-4th"])[12]',
+            locateStrategy: 'xpath'
+        },
+        articleDate4: {
+            selector: '(//span[@class=" fc-4th"])[20]',
+            locateStrategy: 'xpath'
+        }
+        
+    }   
 }
