@@ -121,11 +121,11 @@ module.exports = {
                 console.log(`this is the sliced and diced t: ${t}`)
                 if (t == "hour" || t == "mins" || t == "hours" || t == "min") {
                     fs.writeFileSync('./testAssets/timeCheck.txt', "reply is within a day")
-                    Yahoo.verify.ok(2===2, "Test passed")
+                    Yahoo.verify.ok(2 === 2, "Test passed")
                 }
                 else {
                     fs.writeFileSync('./testAssets/timeCheck.txt', "reply is over a day")
-                    Yahoo.verify.ok(2===3, "Test Failed")
+                    Yahoo.verify.ok(2 === 3, "Test Failed")
                 }
             })
     },
