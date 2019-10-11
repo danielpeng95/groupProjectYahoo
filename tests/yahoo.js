@@ -99,7 +99,7 @@ module.exports = {
             .verify.containsText('[class=" reg searchCenterMiddle"]', 'pizza')
 
     },
-    'Do we get relevant replies to tech questions?': browser => { //Nate
+    'Do we get time relevant replies to tech questions?': browser => { //Nate
         fs.writeFileSync('./testAssets/timeCheck.txt', " ")
         Yahoo
             .click('@compTab')
@@ -107,9 +107,9 @@ module.exports = {
             .api.pause(1000)
         Yahoo
             .click('@article1')
-            .api.pause(1000)
+            .api.pause(2000)
         Yahoo
-            .waitForElementVisible('@articleDate')
+            .waitForElementVisible('@articleDate', 8000)
             .getText('@articleDate', function (result) {
                 console.log(result.value)
                 var t = result.value
@@ -121,9 +121,11 @@ module.exports = {
                 console.log(`this is the sliced and diced t: ${t}`)
                 if (t == "hour" || t == "mins" || t == "hours" || t == "min") {
                     fs.writeFileSync('./testAssets/timeCheck.txt', "reply is within a day")
+                    Yahoo.verify.ok(2===2, "Test passed")
                 }
                 else {
                     fs.writeFileSync('./testAssets/timeCheck.txt', "reply is over a day")
+                    Yahoo.verify.ok(2===3, "Test Failed")
                 }
             })
     },
