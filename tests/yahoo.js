@@ -99,7 +99,7 @@ module.exports = {
             .verify.containsText('[class=" reg searchCenterMiddle"]', 'pizza')
 
     },
-    'Do we get relevant replies to tech questions?': browser => { //Nate
+    'Do we get time relevant replies to tech questions?': browser => { //Nate
         fs.writeFileSync('./testAssets/timeCheck.txt', " ")
         Yahoo
             .click('@compTab')
@@ -107,9 +107,9 @@ module.exports = {
             .api.pause(1000)
         Yahoo
             .click('@article1')
-            .api.pause(1000)
+            .api.pause(2000)
         Yahoo
-            .waitForElementVisible('@articleDate')
+            .waitForElementVisible('@articleDate', 8000)
             .getText('@articleDate', function (result) {
                 console.log(result.value)
                 var t = result.value
@@ -192,10 +192,20 @@ module.exports = {
         var date2
         Yahoo
             .setValue('@searchBar', ['walrus', browser.Keys.ENTER])
-            .pause(5000)
-            // .verify.containsText('@relevance1','walrus'||'Walrus') 
-            // .verify.containsText('@relevance2','walrus')
-            // .verify.containsText('@relevance3','walrus')
+            .api.pause(5000)
+            .getText('@relevance1', function (result){
+                Yahoo
+                .verify.ok(result.value=="walrus"||result.value=="Walrus")
+            })
+            .getText('@relevance2', function (result){
+                Yahoo
+                .verify.ok(result.value=="walrus"||result.value=="Walrus")
+            })
+            .getText('@relevance3', function (result){
+                Yahoo
+                .verify.ok(result.value=="walrus"||result.value=="Walrus")
+            })
+            
             .click('@timeSort')
 
             .getText('@articleDate1', function (result) {
