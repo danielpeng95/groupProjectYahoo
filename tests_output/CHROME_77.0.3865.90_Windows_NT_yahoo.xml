@@ -1,175 +1,166 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites errors="1"
-<<<<<<< HEAD
+<testsuites errors="0"
             failures="1"
-            tests="3">
+            tests="5">
 
   <testsuite name="yahoo"
-    errors="1" failures="1" hostname="" id="" package="yahoo" skipped="1"
-    tests="3" time="228.1" timestamp="">
+    errors="0" failures="1" hostname="" id="" package="yahoo" skipped="1"
+    tests="5" time="274.1" timestamp="">
   
-    <testcase name="Do we get Daily news?" classname="yahoo" time="6.047" assertions="2">
-=======
-            failures="0"
-            tests="1">
+    <testcase name="Can we Log in &amp; Log out?" classname="yahoo" time="16.97" assertions="5">
 
-  <testsuite name="yahoo"
-    errors="1" failures="0" hostname="" id="" package="yahoo" skipped="3"
-    tests="1" time="33.66" timestamp="">
-  
-    <testcase name="Do we get relevant replies to tech questions?" classname="yahoo" time="33.66" assertions="2">
->>>>>>> ab4531489a038240cba7142785f706157177becf
+    
+
+    
+
+    
 
     
 
     
     </testcase>
-<<<<<<< HEAD
   
-    <testcase name="Can we change Tabs/Categories?" classname="yahoo" time="84.19" assertions="54">
+    <testcase name="Can we Search &amp; Check Results?" classname="yahoo" time="11.49" assertions="2">
 
     
 
     
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-=======
-  
-
-  
-
-  
->>>>>>> ab4531489a038240cba7142785f706157177becf
-    
-    <testcase
-      name="Can we change Tabs/Categories?" classname="yahoo">
-      <skipped />
     </testcase>
-<<<<<<< HEAD
   
-    <testcase name="Can we ask/post questions?" classname="yahoo" time="137.9" assertions="4">
+    <testcase name="Do we get time relevant replies to tech questions?" classname="yahoo" time="21.43" assertions="3">
 
     
 
     
 
-      <failure message="Timed out while waiting for element &lt;[id=&#34;login-username&#34;]&gt; to be present for 5000 milliseconds. - expected [0;32m&#34;visible&#34;[0m but got: [0;31m&#34;not found&#34;[0m">    at Object.Can we ask/post questions? (C:\Users\benpe\DevMountain\groupProjectYahoo\tests\yahoo.js:160:14)</failure>
-
     
-=======
-    
-    <testcase
-      name="Can we ask/post questions?" classname="yahoo">
-      <skipped />
     </testcase>
+  
+    <testcase name="Can we change Tabs/Categories?" classname="yahoo" time="199.6" assertions="54">
+
     
-    <testcase
-      name="Check sort by relevance/time" classname="yahoo">
-      <skipped />
->>>>>>> ab4531489a038240cba7142785f706157177becf
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
     </testcase>
+  
+    <testcase name="Can we ask/post questions?" classname="yahoo" time="24.59" assertions="4">
+
     
+
+    
+
+      <failure message="Timed out while waiting for element &lt;[id=&#34;login-username&#34;]&gt; to be present for 8000 milliseconds. - expected [0;32m&#34;visible&#34;[0m but got: [0;31m&#34;not found&#34;[0m">    at Object.Can we ask/post questions? (C:\Users\benpe\DevMountain\groupProjectYahoo\tests\yahoo.js:181:14)</failure>
+
+    
+    </testcase>
+  
+
+  
+
   
     
     <testcase
