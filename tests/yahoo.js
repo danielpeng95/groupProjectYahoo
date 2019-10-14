@@ -78,9 +78,9 @@ module.exports = {
     'Can we Log in & Log out?': browser => { //Daniel
         Yahoo
             .click('@signIn')
-            .waitForElementVisible('@logIn')
+            .waitForElementVisible('@logIn', 10000)
             .setValue('@logIn', ['softwareqa10@yahoo.com', browser.Keys.ENTER])
-            .waitForElementVisible('@pass')
+            .waitForElementVisible('@pass', 10000)
             .setValue('@pass', ['SoftQA1995', browser.Keys.ENTER])
             .verify.containsText('@check', 'Software')
             .api.pause(2000)
@@ -109,7 +109,7 @@ module.exports = {
             .click('@article1')
             .api.pause(2000)
         Yahoo
-            .waitForElementVisible('@articleDate', 8000)
+            .waitForElementVisible('@articleDate', 10000)
             .getText('@articleDate', function (result) {
                 console.log(result.value)
                 var t = result.value
@@ -168,25 +168,23 @@ module.exports = {
         Yahoo
             .api.maximizeWindow()
         Yahoo
-            .waitForElementVisible('@qBox', 8000)
+            .waitForElementVisible('@qBox', 10000)
         // .perform(() => console.log(`This is post getText: ${t}`)) //perform is unique, it ques it up normallly now
         Yahoo
             .perform(() => Yahoo.setValue('@qBox', t))
-
         Yahoo
             .api.pause(3000)
         Yahoo
-            .waitForElementVisible('@qSubmit', 8000)
+            .waitForElementVisible('@qSubmit', 10000)
             .click('@qSubmit')
         Yahoo
-            .waitForElementVisible('@logIn')
+            .waitForElementVisible('@logIn', 10000)
             .setValue('@logIn', ['softwareqa10@yahoo.com', browser.Keys.ENTER])
-            .waitForElementVisible('@pass')
+            .waitForElementVisible('@pass', 10000)
             .setValue('@pass', ['SoftQA1995', browser.Keys.ENTER])
-            .waitForElementVisible('@qResult', 8000) //there is a daily question limit. once i reach it, this will not work
+            .waitForElementVisible('@qResult', 10000) //there is a daily question limit. once i reach it, this will not work
             .verify.containsText('@qResult', t)
     },
-
 
 
     'Check sort by relevance/time': browser => {
