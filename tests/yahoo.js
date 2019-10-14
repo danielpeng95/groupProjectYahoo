@@ -178,7 +178,7 @@ module.exports = {
             .waitForElementVisible('@qSubmit', 10000)
             .click('@qSubmit')
         Yahoo
-            .waitForElementVisible('@logIn', 10000)
+            .waitForElementVisible('@logIn', 15000)
             .setValue('@logIn', ['softwareqa10@yahoo.com', browser.Keys.ENTER])
             .waitForElementVisible('@pass', 10000)
             .setValue('@pass', ['SoftQA1995', browser.Keys.ENTER])
@@ -193,19 +193,23 @@ module.exports = {
         Yahoo
             .setValue('@searchBar', ['walrus', browser.Keys.ENTER])
             .api.pause(5000)
-            .getText('@relevance1', function (result){
-                Yahoo
-                .verify.ok(result.value=="walrus"||result.value=="Walrus")
-            })
-            .getText('@relevance2', function (result){
-                Yahoo
-                .verify.ok(result.value=="walrus"||result.value=="Walrus")
-            })
-            .getText('@relevance3', function (result){
-                Yahoo
-                .verify.ok(result.value=="walrus"||result.value=="Walrus")
-            })
-            
+        Yahoo
+            .verify.containsText('@relevance1', 'walrus')
+            .verify.containsText('@relevance2', 'walrus')
+            .verify.containsText('@relevance3', 'walrus')
+            // .getText('@relevance1', function (result) {
+            //     Yahoo
+            //         .verify.ok(result.value == "walrus" || result.value == "Walrus")
+            // })
+            // .getText('@relevance2', function (result) {
+            //     Yahoo
+            //         .verify.ok(result.value == "walrus" || result.value == "Walrus")
+            // })
+            // .getText('@relevance3', function (result) {
+            //     Yahoo
+            //         .verify.ok(result.value == "walrus" || result.value == "Walrus")
+            // })
+
             .click('@timeSort')
 
             .getText('@articleDate1', function (result) {

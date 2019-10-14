@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
-            failures="1"
-            tests="5">
+            failures="0"
+            tests="1">
 
   <testsuite name="yahoo"
-    errors="0" failures="1" hostname="" id="" package="yahoo" skipped="1"
-    tests="5" time="274.1" timestamp="">
+    errors="0" failures="0" hostname="" id="" package="yahoo" skipped="0"
+    tests="1" time="8.964" timestamp="">
   
-    <testcase name="Can we Log in &amp; Log out?" classname="yahoo" time="16.97" assertions="5">
-
-    
-
-    
+    <testcase name="Check sort by relevance/time" classname="yahoo" time="8.964" assertions="3">
 
     
 
@@ -20,154 +16,9 @@
     
     </testcase>
   
-    <testcase name="Can we Search &amp; Check Results?" classname="yahoo" time="11.49" assertions="2">
-
-    
-
-    
-    </testcase>
-  
-    <testcase name="Do we get time relevant replies to tech questions?" classname="yahoo" time="21.43" assertions="3">
-
-    
-
-    
-
-    
-    </testcase>
-  
-    <testcase name="Can we change Tabs/Categories?" classname="yahoo" time="199.6" assertions="54">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    </testcase>
-  
-    <testcase name="Can we ask/post questions?" classname="yahoo" time="24.59" assertions="4">
-
-    
-
-    
-
-      <failure message="Timed out while waiting for element &lt;[id=&#34;login-username&#34;]&gt; to be present for 8000 milliseconds. - expected [0;32m&#34;visible&#34;[0m but got: [0;31m&#34;not found&#34;[0m">    at Object.Can we ask/post questions? (C:\Users\benpe\DevMountain\groupProjectYahoo\tests\yahoo.js:181:14)</failure>
-
-    
-    </testcase>
-  
 
   
 
-  
-    
-    <testcase
-      name="Check sort by relevance/time" classname="yahoo">
-      <skipped />
-    </testcase>
-    
   
   </testsuite>
 </testsuites>

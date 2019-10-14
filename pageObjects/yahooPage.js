@@ -41,7 +41,7 @@ module.exports = {
         //Nate
         //selectors for search & check results
         searchBar: '[name="p"]',
-        searchButton: '.SharedUH_button1_2fHd_',
+        searchButton: 'button[class="SharedUH_button1_2fHd_"]',
         searchResults: '[class=" reg searchCenterMiddle"]',
         //Daily News
         compTab: '[href="/dir/index?sid=396545660"]',
@@ -54,11 +54,11 @@ module.exports = {
         //Sort
         relevance1: 'div[class="dd algo fst AnswrsV2"]',
         relevance2: {
-            selector: '(//div[@class="dd algo AnswrsV2"])[4]',
+            selector: '(//div[@class="dd algo AnswrsV2"])[5]',
             locateStrategy: 'xpath',
         },
         relevance3: {
-            selector: 'div[class="dd algo lst AnswrsV2"]',
+            selector: '(//div[@class="dd algo AnswrsV2"])[8]',
             locateStrategy: 'xpath',
         },
         timeSort: {
