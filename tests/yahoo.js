@@ -90,6 +90,8 @@ module.exports = {
             // .moveToElement('@ID', 10, 10) //this will hover over //will work too
             .waitForElementVisible('@out')
             .click('@out')
+        Yahoo
+            .api.saveScreenshot('./screenShots/LogIn.png')
     },
     'Can we Search & Check Results?': browser => { //Nate
         Yahoo

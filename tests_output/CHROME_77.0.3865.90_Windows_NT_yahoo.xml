@@ -1,24 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites errors="0"
+<testsuites errors="1"
             failures="0"
             tests="1">
 
   <testsuite name="yahoo"
-    errors="0" failures="0" hostname="" id="" package="yahoo" skipped="0"
-    tests="1" time="8.964" timestamp="">
+    errors="1" failures="0" hostname="" id="" package="yahoo" skipped="5"
+    tests="1" time="2.792" timestamp="">
   
-    <testcase name="Check sort by relevance/time" classname="yahoo" time="8.964" assertions="3">
-
-    
-
-    
-
-    
+    <testcase name="Can we Log in &amp; Log out?" classname="yahoo" time="2.792" assertions="0">
     </testcase>
   
 
   
 
+  
+    
+    <testcase
+      name="Can we Search &amp; Check Results?" classname="yahoo">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Do we get time relevant replies to tech questions?" classname="yahoo">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Can we change Tabs/Categories?" classname="yahoo">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Can we ask/post questions?" classname="yahoo">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Check sort by relevance/time" classname="yahoo">
+      <skipped />
+    </testcase>
+    
   
   </testsuite>
 </testsuites>
