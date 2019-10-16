@@ -113,7 +113,7 @@ module.exports = {
         Yahoo
             .waitForElementVisible('@articleDate', 10000)
             .getText('@articleDate', function (result) {
-                console.log(result.value)
+                console.log(result.value) //example:  . 16 hours ago
                 var t = result.value
                 let splitText = t.split(" ")
                 splitText.pop()
@@ -121,7 +121,7 @@ module.exports = {
                 splitText.shift()
                 t = splitText
                 console.log(`this is the sliced and diced t: ${t}`)
-                if (t == "hour" || t == "mins" || t == "hours" || t == "min") {
+                if (t == "hour" || t == "mins" || t == "hours" || t == "min") { //t.includes("hour") will work too
                     fs.writeFileSync('./testAssets/timeCheck.txt', "reply is within a day")
                     Yahoo.verify.ok(2 === 2, "Test passed")
                 }
