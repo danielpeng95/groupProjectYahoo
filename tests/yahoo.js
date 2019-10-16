@@ -180,7 +180,7 @@ module.exports = {
             .waitForElementVisible('@qSubmit', 10000)
             .click('@qSubmit')
         Yahoo
-            .waitForElementVisible('@logIn', 15000)
+            .waitForElementVisible('@logIn', 20000)
             .setValue('@logIn', ['softwareqa10@yahoo.com', browser.Keys.ENTER])
             .waitForElementVisible('@pass', 10000)
             .setValue('@pass', ['SoftQA1995', browser.Keys.ENTER])
