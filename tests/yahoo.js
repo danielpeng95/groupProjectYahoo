@@ -98,6 +98,7 @@ module.exports = {
             .waitForElementVisible('@searchBar')
             .setValue('@searchBar', 'pizza')
             .click('@searchButton')
+            .waitForElementVisible('[class=" reg searchCenterMiddle"]')
             .verify.containsText('[class=" reg searchCenterMiddle"]', 'pizza')
     },
     'Do we get time relevant replies to tech questions?': browser => {
