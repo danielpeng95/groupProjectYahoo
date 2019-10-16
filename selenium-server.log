@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 15:20:22.741 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.59, revision: e82be7d358
 15:20:22.822 INFO [GridLauncherV3.lambda$buildLaunchers$3] - Launching a standalone Selenium Server on port 4444
 2019-10-16 15:20:22.878:INFO::main: Logging initialized @357ms to org.seleniumhq.jetty9.util.log.StdErrLog
 15:20:23.152 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
 15:20:23.736 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4444
 15:20:24.025 INFO [ActiveSessionFactory.apply] - Capabilities are: {
+=======
+14:59:55.551 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.59, revision: e82be7d358
+14:59:55.651 INFO [GridLauncherV3.lambda$buildLaunchers$3] - Launching a standalone Selenium Server on port 4444
+2019-10-16 14:59:55.726:INFO::main: Logging initialized @428ms to org.seleniumhq.jetty9.util.log.StdErrLog
+14:59:56.129 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
+14:59:56.882 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4444
+14:59:57.489 INFO [ActiveSessionFactory.apply] - Capabilities are: {
+>>>>>>> 55a2cd2230f7ca80fb2547700e7ef92689845ca3
   "acceptSslCerts": true,
   "browserName": "chrome",
   "chromeOptions": {
@@ -11,6 +20,7 @@
   },
   "name": "Yahoo"
 }
+<<<<<<< HEAD
 15:20:24.028 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.chrome.ChromeDriverService)
 Starting ChromeDriver 77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}) on port 40758
 Only local connections are allowed.
@@ -19,3 +29,15 @@ Please protect ports used by ChromeDriver and related test frameworks to prevent
 15:20:29.697 INFO [ProtocolHandshake.createSession] - Detected dialect: OSS
 15:20:30.037 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session 9daf7f9e06eb44281213166ccb5b613a (org.openqa.selenium.chrome.ChromeDriverService)
 15:22:25.155 INFO [ActiveSessions$1.onStop] - Removing session 9daf7f9e06eb44281213166ccb5b613a (org.openqa.selenium.chrome.ChromeDriverService)
+=======
+14:59:57.493 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.chrome.ChromeDriverService)
+Starting ChromeDriver 77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}) on port 10302
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1571259601.662][WARNING]: Timed out connecting to Chrome, retrying...
+15:00:03.887 INFO [ProtocolHandshake.createSession] - Detected dialect: OSS
+15:00:04.368 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session c5f81a4b44d1698e34fb9ddb32bca239 (org.openqa.selenium.chrome.ChromeDriverService)
+[1571259713.795][WARNING]: Timed out connecting to Chrome, retrying...
+[1571259717.902][WARNING]: Timed out connecting to Chrome, retrying...
+15:02:38.868 INFO [ActiveSessions$1.onStop] - Removing session c5f81a4b44d1698e34fb9ddb32bca239 (org.openqa.selenium.chrome.ChromeDriverService)
+>>>>>>> 55a2cd2230f7ca80fb2547700e7ef92689845ca3
