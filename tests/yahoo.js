@@ -111,7 +111,7 @@ module.exports = {
             .click('@article1')
             .api.pause(2000)
         Yahoo
-            .waitForElementVisible('@articleDate', 10000)
+            .waitForElementVisible('@articleDate', 20000)
             .getText('@articleDate', function (result) {
                 console.log(result.value) //example:  . 16 hours ago
                 var t = result.value
@@ -170,7 +170,7 @@ module.exports = {
         Yahoo
             .api.maximizeWindow()
         Yahoo
-            .waitForElementVisible('@qBox', 10000)
+            .waitForElementVisible('@qBox', 20000)
         // .perform(() => console.log(`This is post getText: ${t}`)) //perform is unique, it ques it up normallly now
         Yahoo
             .perform(() => Yahoo.setValue('@qBox', t))
@@ -180,7 +180,7 @@ module.exports = {
             .waitForElementVisible('@qSubmit', 10000)
             .click('@qSubmit')
         Yahoo
-            .waitForElementVisible('@logIn', 20000)
+            .waitForElementVisible('@logIn', 30000)
             .setValue('@logIn', ['softwareqa10@yahoo.com', browser.Keys.ENTER])
             .waitForElementVisible('@pass', 10000)
             .setValue('@pass', ['SoftQA1995', browser.Keys.ENTER])
