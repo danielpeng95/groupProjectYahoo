@@ -187,7 +187,6 @@ module.exports = {
             .verify.containsText('@qResult', t)
     },
 
-
     'Check sort by relevance/time': browser => {
         var date1
         var date2
