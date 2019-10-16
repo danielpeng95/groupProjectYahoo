@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites errors="1"
-            failures="0"
+<testsuites errors="0"
+            failures="1"
             tests="1">
 
   <testsuite name="yahoo"
-    errors="1" failures="0" hostname="" id="" package="yahoo" skipped="5"
-    tests="1" time="2.792" timestamp="">
+    errors="0" failures="1" hostname="" id="" package="yahoo" skipped="5"
+    tests="1" time="16.29" timestamp="">
   
-    <testcase name="Can we Log in &amp; Log out?" classname="yahoo" time="2.792" assertions="0">
+    <testcase name="Can we Log in &amp; Log out?" classname="yahoo" time="16.29" assertions="2">
+
+      <failure message="Timed out while waiting for element &lt;[id=&#34;login-passwd&#34;]&gt; to be present for 10000 milliseconds. - expected [0;32m&#34;visible&#34;[0m but got: [0;31m&#34;not found&#34;[0m">    at Object.Can we Log in &amp; Log out? (C:\Users\benpe\DevMountain\groupProjectYahoo\tests\yahoo.js:83:14)</failure>
+
+    
     </testcase>
   
 

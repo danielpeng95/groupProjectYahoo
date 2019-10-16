@@ -75,7 +75,7 @@ module.exports = {
     after: browser => {
         Yahoo.end()
     },
-    'Can we Log in & Log out?': browser => { //Daniel
+    'Can we Log in & Log out?': browser => {
         Yahoo
             .click('@signIn')
             .waitForElementVisible('@logIn', 10000)
@@ -93,15 +93,14 @@ module.exports = {
         Yahoo
             .api.saveScreenshot('./screenShots/LogIn.png')
     },
-    'Can we Search & Check Results?': browser => { //Nate
+    'Can we Search & Check Results?': browser => {
         Yahoo
             .waitForElementVisible('@searchBar')
             .setValue('@searchBar', 'pizza')
             .click('@searchButton')
             .verify.containsText('[class=" reg searchCenterMiddle"]', 'pizza')
-
     },
-    'Do we get time relevant replies to tech questions?': browser => { //Nate
+    'Do we get time relevant replies to tech questions?': browser => {
         fs.writeFileSync('./testAssets/timeCheck.txt', " ")
         Yahoo
             .click('@compTab')
@@ -131,12 +130,12 @@ module.exports = {
                 }
             })
     },
-    'Can we change Tabs/Categories?': browser => { //Daniel
+    'Can we change Tabs/Categories?': browser => {
         Yahoo
         Categ(Yahoo) //function on top of this page
     },
 
-    'Can we ask/post questions?': browser => { //Daniel 
+    'Can we ask/post questions?': browser => {
         var originalWindow = ''
         var newWindow = ''
         var t = ''
