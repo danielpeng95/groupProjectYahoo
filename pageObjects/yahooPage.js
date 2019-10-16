@@ -5,13 +5,13 @@ var today = new Date();
 module.exports = {
     url: 'https://answers.yahoo.com/',
     commands: [{
-        scrollDownBy: function(pixels){ //custom command for scrolling down
+        scrollDownBy: function (pixels) { //custom command for scrolling down
             this.api.execute(`window.scrollBy(0, ${pixels})`)
             return this
         }
     }],
-    
-    
+
+
     elements: {
         //Daniel
         //selectors for log in & log out
@@ -25,7 +25,7 @@ module.exports = {
         out: '[id="uh-signout"]',
 
         //selectors for tabs/categories
-        cat: {selector: '(//a[@class=" Mstart-3 unselected D-ib"])[1]', locateStrategy: 'xpath'},
+        cat: { selector: '(//a[@class=" Mstart-3 unselected D-ib"])[1]', locateStrategy: 'xpath' },
         catTitle: '[id="ya-sub-category-title"]',
 
         catResult: '[class="Bgc-bl06 Px-14 Pb-14 Pt-10 Clr-w"]',
@@ -75,7 +75,7 @@ module.exports = {
         articleDate1: {
             selector: '(//span[@class=" fc-4th"])[2]',
             locateStrategy: 'xpath'
-        }, 
+        },
         articleDate2: {
             selector: '(//span[@class=" fc-4th"])[8]',
             locateStrategy: 'xpath'
@@ -88,6 +88,6 @@ module.exports = {
             selector: '(//span[@class=" fc-4th"])[20]',
             locateStrategy: 'xpath'
         }
-        
-    }   
+
+    }
 }
