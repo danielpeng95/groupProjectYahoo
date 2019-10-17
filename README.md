@@ -19,9 +19,8 @@ In your terminal:
 1. type: npm i -g nightwatch (you have nightwatch installed now)
 
 
-You need to create a file called: nightwatch.props.js in your testing-resources folder
-Here is an example: make sure the path will need to be your own path to your testing-resources folder
-
+You need to create a file called: nightwatch.props.js in your testing-resources folder.
+Here is an example below: make sure the path will need to be your own path to your testing-resources folder.
 module.exports = {
     resourcePath: "C:\\Users\\benpe\\DevMountain\\testing-resources\\",
     seleniumServer: "selenium-server-standalone-3.141.59.jar",
