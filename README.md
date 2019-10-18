@@ -22,6 +22,7 @@ In your terminal:
 
 You need to create a file called: nightwatch.props.js in your testing-resources folder.
 Here is an example below: make sure the path will need to be your own path.
+
 module.exports = {
     resourcePath: "C:\\Users\\danielpeng95\\testing-resources\\",
     seleniumServer: "selenium-server-standalone-3.141.59.jar",
